@@ -9,6 +9,8 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
 <link rel="stylesheet" href="reveal/css/reveal.css">
 <link rel="stylesheet" href="reveal/css/theme/simple.css" id="theme">
+<link rel="stylesheet" href="css/font-awesome.css">
+
 <!-- For syntax highlighting -->
 <!-- light editor-->
 <link rel="stylesheet" href="reveal/lib/css/light.css">
@@ -449,16 +451,16 @@ ul li a {}
 					</ul>
 				</p>
 				<p>For example, this:</p>
-				<pre>
+				<pre><code class="css">
 .sidebar {  /* color it grey, no border */
     border-color: rgb(123, 123, 123);
     border-width: 0px;
 }
-				</pre>
+				</code></pre>
 				<p>becomes:</p>
-				<pre>
+				<pre><code class="css">
 .sidebar{border-color:#7b7b7b;border-width:0}
-				</pre>
+				</code></pre>
             </section>
             <section>
             	<p>Some CSS Compression Tools:</p>
@@ -476,31 +478,118 @@ it slows down load time. For smaller images, CSS spriting can help.</p>
             <section>
 				<p>Spriting uses one image file with an unlimited number of images in it. To load a certain image, you request a coordinate within the image file.</p>
 				<p><strong>This is an example of CSS without sprites:</strong></p>
-				<pre>
+				<pre><code class="css">
 #nav li a.item1 {background-image:url('../img/image1.gif')}
 #nav li a:hover.item1 {background-image:url('../img/image1_over.gif')}
-				</pre>
+				</code></pre>
 				<p><strong>This is an example of the same CSS using sprites:</strong></p>
-				<pre>
+				<pre><code class="css">
 #nav li a {background-image:url('../img/image_nav.gif')}
 #nav li a.item1 {background-position:0px 0px}
 #nav li a:hover.item1 {background-position:0px -72px}
+				</code></pre>
+            </section>
+            <section>
+            	<h2>Resources on Sprites</h2>
+            	<ul>
+            		<li><a href="http://www.w3schools.com/css/css_image_sprites.asp" target="_blank">w3 Schools Sprites Overview</a></li>
+            		<li><a href="http://css-tricks.com/css-sprites/" target="_blank">CSS Sprites</a></li>
+            	</ul>
+            </section>
+            <section>
+            	<h2>Lots of Images: Data URIs</h2>
+            	<p>Instead of linking to an external image, data URIs allow you to embed the image directly into the document.</p>
+            	<p>In CSS, it looks like this:</p>
+            	<pre>
+            	<code class="css">
+li { 
+  background: 
+    url(data:image/gif;base64,R0lGODlhEAAQAMQAAORHHOVSKudfOulrSOp3WOyDZu6QdvCchPGolfO0o/XBs/fNwfjZ0frl3/zy7////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAkAABAALAAAAAAQABAAAAVVICSOZGlCQAosJ6mu7fiyZeKqNKToQGDsM8hBADgUXoGAiqhSvp5QAnQKGIgUhwFUYLCVDFCrKUE1lBavAViFIDlTImbKC5Gm2hB0SlBCBMQiB0UjIQA7)
+    no-repeat
+    left center;
+  padding: 5px 0 5px 25px;
+}            	
+            	</code>
+            	</pre>
+            </section>
+            <section>
+            	<h2>Data URI Generators:</h2>
+            	<ul>
+            		<li><a href="http://dopiaza.org/tools/datauri/index.php" target="_blank">Dopiaza.org Data: URI Generator</a></li>
+					<li><a href="http://duri.me/" target="_blank">duri.me Data URI Generator</a></li>
+            </section>
+            <section>
+            	<h2>Lots of Images: Icon Fonts</h2>
+				<p>An icon font is a custom font with icons instead of characters. You can make your own with <a href="https://icomoon.io/" target="_blank">icomoon</a> or <a href="http://fontcustom.com/" target="_blank">Font Custom</a> or use the popular <a href="http://fortawesome.github.io/Font-Awesome/icons/">FontAwesome</a></p>
+				With an icon font, you include classes to add certain icons to your page.
+				<pre>
+				<code class="html">
+<i class="fa fa-birthday-cake"></i>
+				</code>
 				</pre>
+				<a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Download FontAwesome Here!</a>
+            </section>
+			<section data-background="#f05b62">
+                <h2 style="color: #fafafa;">Productivity</h2>
+            </section>
+            <section>
+            	<h2>CSS Pre-processors</h2>
+            	<p>A pre-processor lets you write in a special, more efficient language and then compiles into organized CSS</p>
+				<p>Common features:</p>
+			      <ul>
+			        <li>variables</li>
+			        <li>nesting</li>
+			        <li>mix-ins</li>
+			        <li>inheritance</li>
+			        <li>color functions</li>
+			        <li>vendor prefixes</li>
+			      </ul>
+            </section>
+			<section>
+				<h2>Most Common CSS Pre-Processors: Sass</h2>
+				<p><a href="http://sass-lang.com/" target="_blank">Sass</a> stands for "Syntactically Awesome Style Sheets"</p>
+				<pre>
+				<code class="css">/*Variables*/				
+@brand-color: #F05B62;
 				
-            </section>
-            <section>
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
 
-            </section>
-            <section>
+  li { display: inline-block; }
 
-            </section>
-            <section>
+  a {
+    display: block;
+    color: @brand-color;
+    padding: 6px 12px;
+    text-decoration: none;
+  }
+}
+				</code>
+				</pre>
+			</section>            
+			<section>
+				<h2>Most Common CSS Pre-Processors: Less</h2>
+				<p><a href="http://lesscss.org" target="_blank">Less</a> is similar to Sass, but has slightly different syntax.</p>
+				<pre>
+				<code class="css">				
+/* Mixin */
+.border-radius (@radius: 5px) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+}				
 
-            </section>
-            <section>
+				</code>
+				</pre>
+			</section>            
 
-            </section>
-            
+			<section>
+
+			</section>            
             
             
             
