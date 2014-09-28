@@ -534,7 +534,7 @@ li {
             </section>
             <section>
             	<h2>CSS Pre-processors</h2>
-            	<p>A pre-processor lets you write in a special, more efficient language and then compiles into organized CSS</p>
+            	<p>A pre-processor lets you write in a special, more efficient language and then compiles into organized CSS.</p>
 				<p>Common features:</p>
 			      <ul>
 			        <li>variables</li>
@@ -547,7 +547,7 @@ li {
             </section>
 			<section>
 				<h2>Most Common CSS Pre-Processors: Sass</h2>
-				<p><a href="http://sass-lang.com/" target="_blank">Sass</a> stands for "Syntactically Awesome Style Sheets"</p>
+				<p><a href="http://sass-lang.com/" target="_blank">Sass</a> stands for "Syntactically Awesome Style Sheets." It runs on Ruby, so it's processed server-side.</p>
 				<pre>
 				<code class="css">/*Variables*/				
 @brand-color: #F05B62;
@@ -573,23 +573,65 @@ nav {
 			</section>            
 			<section>
 				<h2>Most Common CSS Pre-Processors: Less</h2>
-				<p><a href="http://lesscss.org" target="_blank">Less</a> is similar to Sass, but has slightly different syntax.</p>
+				<p><a href="http://lesscss.org" target="_blank">Less</a> is similar to Sass, but has slightly different syntax, and is processed using JavaScript (client-side).</p>
 				<pre>
 				<code class="css">				
-/* Mixin */
-.border-radius (@radius: 5px) {
-    -webkit-border-radius: @radius;
-    -moz-border-radius: @radius;
-    border-radius: @radius;
-}				
-
+@color-base: #2d5e8b;  
+  
+.class1 {  
+    background-color: @color-base;  
+}  
+.class2 {  
+    background-color: #fff;  
+    color: @color-base;  
+}  
+.class3 {  
+    border: 1px solid @color-base;  
+}  
 				</code>
 				</pre>
 			</section>            
 
 			<section>
-
-			</section>            
+				<h2>Resources on CSS Pre-Processors</h2>
+				<ul>
+					<li>Sass
+						<ul>
+							<li><a href="http://sass-lang.com/guide" target="_blank">Sass Basics</a>
+							<li><a href="https://www.codeschool.com/courses/assembling-sass" target="_blank">Assembling Sass @Codeschool</a>
+						</ul>
+					</li>
+					<li>Less
+						<ul>
+							<li><a href="http://lesscss.org/" target="_blank">Less.js</a></li>
+							<li><a href="http://www.hongkiat.com/blog/less-basic/" target="_blank">Less CSS Beginner's Guide</a></li>
+						</ul>
+					</li>	
+					<li><a href="http://www.smashingmagazine.com/2011/09/09/an-introduction-to-less-and-comparison-to-sass/" target="_blank">Compare Less and Sass</a></li>		
+				</ul>
+			</section>         
+			<section>
+				<h2>CSS Build Tools</h2>
+				<p>Many web developers use build tools to help them automate tasks.</p>
+			      <ul>
+			        <li><a href="http://incident57.com/codekit/">CodeKit</a>: a Mac app that can compile Less and Sass, will auto-refresh your browser on save, and has Bower built in, so you can install thousand of components (like Bootstrap, jQuery, or WordPress) with a single click!</li>
+			        <li><a href="http://gruntjs.com/">GruntJS</a>: A command-line JS tool for automating tasks like compiling CSS.</li>
+			      </ul>
+			</section>   
+            <section data-background="#f05b62">
+                <h2 style="color: #fafafa;">Upcoming Events</h2>
+            </section>
+            <section>
+                <h4>Denver Study Group: How to Build a Website - HTML & CSS for Beginners</h4>
+                <p>Turing School of Software & Design</p>
+                <p>Wednesday, October 1, 2014 - 5:30 PM to 6:45 PM</p><br>
+                <h4>BOULDER: CSS3 Properties &amp; Selectors</h4>
+                <p><strong>Galvanize Boulder</strong></p>
+                <p>October 9th 6pm - 8pm</p><br>
+                <h4>BOULDER: Intro to Command Line</h4>
+                <p><strong>Galvanize Boulder</strong></p>
+                <p>October 15th 6pm - 8pm</p>
+            </section>
             
             
             
