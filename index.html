@@ -471,10 +471,22 @@ ul li a {}
             <section>
             	<h2>Lots of Images: Spriting</h2>
             	<p>When a pages uses many <code>IMG</code> tags or <code>background-url</code> properties,
-it slows down loading. For smaller images, "CSS spriting" can help.</p>
+it slows down load time. For smaller images, CSS spriting can help.</p>
             </section>
             <section>
-
+				<p>Spriting uses one image file with an unlimited number of images in it. To load a certain image, you request a coordinate within the image file.</p>
+				<p><strong>This is an example of CSS without sprites:</strong></p>
+				<pre>
+#nav li a.item1 {background-image:url('../img/image1.gif')}
+#nav li a:hover.item1 {background-image:url('../img/image1_over.gif')}
+				</pre>
+				<p><strong>This is an example of the same CSS using sprites:</strong></p>
+				<pre>
+#nav li a {background-image:url('../img/image_nav.gif')}
+#nav li a.item1 {background-position:0px 0px}
+#nav li a:hover.item1 {background-position:0px -72px}
+				</pre>
+				
             </section>
             <section>
 
