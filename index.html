@@ -32,166 +32,6 @@
 <div class="reveal">
 	<!-- Any section element inside of this container is displayed as a slide -->
 	<div class="slides">
-		<!-- Opening -->
-		<section>
-		<img src="images/gdi_logo_badge.png" style="padding: 10px;"/>
-		<h2>Advanced CSS Techniques</h2>
-		</section>
-		<!-- Sample Slide -->
-		<section>
-		<h2>Welcome!</h2>
-		</section>
-		<section>
-		<h2>Thanks to our sponsor:</h2>
-		<img src="images/sponsors/sendgrid.jpg" style="border:none; width: 400px;"/>
-		</section>
-		<section>
-		<h2>Meet your instructor: Cara Jo Miller</h2>
-		<ul>
-			<li><strong>Co-founder:</strong> Girl Develop It Boulder</li>
-			<li><strong>Lead Designer:</strong> Simple Energy</li>
-			<li><strong>E-mail:</strong> carajo@girldevelopit.com</li>
-			<li><strong>Twitter:</strong> @corrinajo</li>
-			<li>Lover of all things glitter</li>
-		</ul>
-		</section>
-		<section>
-		<h2>Meet your instructor: Caitlin McKenna</h2>
-		<ul>
-			<li><strong>Web Developer:</strong> Insight Designs</li>
-			<li><strong>Twitter:</strong> @caitlinemckenna</li>
-			<li>Spotify Playlist Curator</li>
-		</ul>
-		</section>
-		<section>
-		<h2>What we will be covering in this workshop</h2>
-		<ol>
-			<li>Media Queries for cross-device CSS</li>
-			<li>How to write cross-browser CSS</li>
-			<li>How to set CSS defaults</li>
-			<li>How to use CSS to enhance your site's performance</li>
-			<li>Using CSS Pre-Processors for productivity</li>
-		</ol>
-		</section>
-		<section data-background="#f05b62">
-		<h2 style="color: #fafafa;">Cross-Device CSS</h2>
-		<img src="images/devices.png">
-		</section>
-		<section>
-		<h2>What's the point of a CSS media query?</h2>
-		<p>
-			Media queries are designed to make your life easier by allowing you to control how your elements look on different devices.
-		</p>
-		<br>
-		<p>
-			Essentially, they are conditional statements that will apply certain style rules to your elements, depending on the device your site is being viewed on.
-		</p>
-		</section>
-		<section>
-		<p>
-			Using conditional statements, this desktop design:
-		</p>
-		<img src="images/desktop.png">
-		</section>
-		<section>
-		<p>
-			Also looks great on a tablet:
-		</p>
-		<img src="images/iPad.png">
-		</section>
-		<section>
-		<p>
-			And rad on a smartphone!
-		</p>
-		<img src="images/iPhone.png">
-		</section>
-		<section>
-		<p>
-			You can also use media queries to make sure your content looks great when it's printed out!
-		</p>
-		</section>
-		<section>
-		<h2>How do media queries work?</h2>
-		<p>
-			A media query consists of a media type and an optional combination of media features. CSS rules inside the query will be applied only if the query is true.
-		</p>
-		<pre>
-			<code class="xml">@media &lt;media types&gt; and &lt;media features&gt; { /* media-specific rules */ } </code>
-		</pre>
-		<p>
-			They can also be specified for a linked stylesheet:
-		</p>
-		<pre>
-			<code class="xml">&lt;link rel="stylesheet" media="&lt;media types&gt; and &lt;media features&gt;" href="alternative.css" /&gt; </code>
-		</pre>
-		</section>
-		<section>
-		<h2>Print Styles</h2>
-		<p>
-			All modern browsers support the "print" media type for specifying print styles.
-		</p>
-		<pre>
-			 @media print { body { background: white; } #header, #footer { display: none; } .section { page-break-inside: avoid; page-break-after: always; } }
-		</pre>
-		</section>
-		<section>
-		<h2>Resolution Queries</h2>
-		<p>
-			Modern mobile browsers support media queries which depend on the <code>device-width</code> and/or <code>orientation</code>:
-		</p>
-		<p>
-			Targeting iPads:
-		</p>
-		<pre>
-			 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) { img { width: 100%; } }
-		</pre>
-		</section>
-		<section>
-		<h2>Resolution Queries</h2>
-		<p>
-			A more general approach is just to query on <code>min-width</code> and <code>max-width</code>, which are calculated based on window size, not device size.
-		</p>
-		<pre>
-			 @media screen and (max-width: 640px) { #sidebar { display: none; } }
-		</pre>
-		<pre>
-			 @media (min-width: 768px) and (max-width: 979px) { #sidebar { width: 200px; } }
-		</pre>
-		</section>
-		<section>
-			<h2>Pixel Density Queries</h2>
-			<p>The experimental <code>device-pixel-ratio</code> feature can be used to detect pixel density:</p>
-<pre>
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-    only screen and (-o-min-device-pixel-ratio: 3/2),
-    only screen and (min--moz-device-pixel-ratio: 1.5),
-    only screen and (min-device-pixel-ratio: 1.5) {
-        #logo {
-            background-image:url(images/icon@2x.png);
-        }
-}
-</pre>	
-		</section>
-		<section>
-			<h2>Testing Your CSS</h2>
-			<p>Besides testing on the actual devices or resizing the browser, you can use these tools:</p>
-			<ul>
-			 <li><a href="http://pamelafox.github.com/resolutionizer/">Resolutionizer</a>
-			 <li><a href="http://screenqueri.es/">ScreenQueries</a>
-			 <li><a href="http://labs.adobe.com/technologies/shadow/">Adobe Shadow</a>
-			 <li><a href="https://developer.mozilla.org/en-US/docs/Tools/Responsive_Design_View">Firefox Responsive Design View</a>
-			</ul>
-     </section>	
-	 <section>
-			<h2>Develop it!</h2>
-			<p>Open your style.css and add a media query so that all images </p>
-	</section>
-
-<<<<<<< HEAD
-    <div class="reveal">
-
-        <!-- Any section element inside of this container is displayed as a slide -->
-        <div class="slides">
             <!-- Opening -->
             <section>
                 <img src="images/gdi_logo_badge.png" style="padding: 10px;"/>
@@ -232,6 +72,39 @@
             <section data-background="#f05b62">
                 <h2 style="color: #fafafa;">Cross-Device CSS</h2>
             </section>
+            <section>
+			<h2>What's the point of a CSS media query?</h2>
+			<p>
+				Media queries are designed to make your life easier by allowing you to control how your elements look on different devices.
+			</p>
+			<br>
+			<p>
+				Essentially, they are conditional statements that will apply certain style rules to your elements, depending on the device your site is being viewed on.
+			</p>
+			</section>
+			<section>
+			<p>
+				Using media queries, this desktop design:
+			</p>
+			<img src="images/desktop.png">
+			</section>
+			<section>
+			<p>
+				Also looks great on a tablet:
+			</p>
+			<img src="images/iPad.png">
+			</section>
+			<section>
+			<p>
+				And rad on a smartphone!
+			</p>
+			<img src="images/iPhone.png">
+			</section>
+			<section>
+			<p>
+				You can also use media queries to make sure your content looks great when it's printed out!
+			</p>
+			</section>
             <section>
                 <h2>CSS Media Queries</h2>
                 <p>A media query consists of a media type and an optional combination of media features. CSS rules inside the query will be applied
@@ -356,12 +229,9 @@ only if the query is true.</p>
             <section>
                 <h2>Media Query Resources</h2>
                 <ul>
-                    <li>https://developer.mozilla.org/en/CSS/@media#Media_groups</li>
-                    <li>https://developer.mozilla.org/en/CSS/Media_queries</li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries" target="bank">Mozilla Developer Network Media Queries</a></li>
                     <li><a href="http://css-tricks.com/snippets/css/media-queries-for-standard-devices/">Media Queries for Standard Devices</a></li>
-                    <li>http://css-tricks.com/css-media-queries/</li>
-                    <li>http://css-tricks.com/resolution-specific-stylesheets/</li>
-                    <li>https://developer.mozilla.org/en/CSS/Media_queries#-moz-device-pixel-ratio</li>
+                    <li><a href="http://css-tricks.com/css-media-queries/" target="blank">CSS Media Queries & Using Available Space</a></li>
                 </ul>
             </section>
             <section data-background="#f05b62">
@@ -449,21 +319,23 @@ button.glossy {
 </section>
             <section>
                 <h2>Cross-browser CSS Resources</h2>
-                http://css-tricks.com/rgba-browser-support/
-http://css-tricks.com/quickie-css3-tricks-with-fallbacks/
-http://www.xanthir.com/blog/b4JF0
-http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+                <ul>
+                	<li><a href="http://css-tricks.com/rgba-browser-support/" target="_blank">RGBa Browser Support</a></li>
+					<li><a href="http://css-tricks.com/quickie-css3-tricks-with-fallbacks/" target="_blank">Quickie CSS3 Tricks with Fallbacks</a></li>
+					<li><a href="http://www.xanthir.com/blog/b4JF0" target="_blank">How CSS Handles Errors</a></li>
+					<li><a href="http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/" target="_blank">Conditional Stylesheets vs CSS Hacks? Answer: Neither!</a></li>
+					<li><a href="http://paulirish.com/2009/browser-specific-css-hacks/">CSS hacks with JavaScript</a></li>
 
-<a href="http://paulirish.com/2009/browser-specific-css-hacks/">CSS hacks with JavaScript</a>
-</section>
+                </ul>
+                </section>
 <section data-background="#f05b62">
-                <h2 style="color: #fafafa;">Good Defaults for being awesome</h2>
+                <h2 style="color: #fafafa;">Good Defaults For<br> Being Awesome</h2>
             </section>
             <section>
                 <h2>CSS Resets</h2>
                 <p>CSS reset stylesheets are used to normalize the default CSS across browsers.</p>
-                <p><a href="http://meyerweb.com/eric/tools/css/reset/">Reset.css</a> removes every default style.</p>
-<p><a href="http://necolas.github.com/normalize.css/">Normalize.css</a> normalizes the default styles across browsers 
+                <p><a href="http://meyerweb.com/eric/tools/css/reset/" target="_blank">Reset.css</a> removes every default style.</p>
+<p><a href="http://necolas.github.com/normalize.css/" target="_blank">Normalize.css</a> normalizes the default styles across browsers 
 (and is the preferred approach).
 </p>
             </section>
@@ -486,7 +358,7 @@ http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
             <section>
                 <h2>CSS Frameworks</h2>
                 <p>Usually include a reset, a grids system, styles for typography and forms. Some include support for mobile/print.</p>
-<p>With <a href="http://getbootstrap.com">Twitter Bootstrap</a>:</p>
+<p>With <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>:</p>
 <pre><code class="xml">
 &lt;link href=&quot;http://twitter.github.com/bootstrap/assets/css/bootstrap.css&quot; rel=&quot;stylesheet&quot;&gt;
 &lt;div class=&quot;container&quot;&gt;
@@ -504,22 +376,23 @@ http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
                 <h2 style="color: #fafafa;">Let's Develop It! </h2>
             </section>
             <section>
-                <h2>Bootstrap Excersize</h2>
-                <p>In your <strong>exercises &raquo; bootstrap</strong> folder, open up index.html in the browser and in your text editor.</p>
+                <h2>Bootstrap Exercise</h2>
+                <p>In your <strong>exercises/bootstrap</strong> folder, open up index.html in the browser and in your text editor.</p>
                 <ul>
-                    <li>Use Bootstrap's grid classes to make a basic two column layout with the sidebar and the content areas.<strong>Hint: Use <code>row, container, and col-md-*</code> classes.</strong></li>
+                    <li>Use Bootstrap's grid classes to make a basic two column layout with the sidebar and the content areas.<br>
+                    <strong>Hint: Use <code>.row, .container, and .col-md-*</code> classes.</strong></li>
                     <li>Put the images with their headline &amp; paragraphs into columns to make a 3-column layout.</li>
-                    <li>Apply the class <code>img-responsive</code> to the images to shrink them based on column width.</li>
+                    <li>Apply the class <code>.img-responsive</code> to the images to shrink them based on column width.</li>
                 </ul>
             </section>
 
             <section>
                 <h2>Popular Frameworks</h2>
                 <ul>
-                    <li><a href="http://getbootstrap.com">Bootstrap</a></li>
-                    <li><a href="http://foundation.zurb.com/">ZURB Foundation</a></li>
-                    <li><a href="http://purecss.io">Pure CSS</a></li>
-                    <li><a href="http://topcoat.io">Topcoat</a></li>
+                    <li><a href="http://getbootstrap.com" target="_blank">Bootstrap</a></li>
+                    <li><a href="http://foundation.zurb.com/" target="_blank">ZURB Foundation</a></li>
+                    <li><a href="http://purecss.io" target="_blank">Pure CSS</a></li>
+                    <li><a href="http://topcoat.io" target="_blank">Topcoat</a></li>
                 </ul>
             </section>
             <section data-background="#f05b62">
@@ -545,13 +418,82 @@ http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
                     <li>Universal Rules (<code>*, [type="checkbox"]</code>)
                 </ul>
                 <p>CSS engines evaluate selectors from right to left.
-<pre><code class="css">
-/* Starts with h3 */
+				<pre><code class="css">
+/* CSS engine starts evaluating with h3 */
 #footer h3 {}
-/* Starts with a */
+/* CSS engine starts evaluating with a */
 ul li a {}
-</code></pre>
+				</code></pre>
             </section>
+            <section>
+	            <p>You can <a href="https://developer.mozilla.org/en/Writing_Efficient_CSS" target="_blank">read more on the Mozilla Developer Network</a> or
+	use a tool like <a href="http://csslint.net/" target="_blank">CSSLint</a> to warn you of inefficient selectors.
+				</p>
+            </section>
+            <section>
+            	Some more resources writing efficient CSS
+				<ul>
+					<li><a href="http://csswizardry.com/2011/09/writing-efficient-css-selectors/" target="_blank<">Writing efficient CSS selectors</a></li>
+					<li><a href="http://www.stevesouders.com/blog/2009/06/18/simplifying-css-selectors/" target="_blank">Simplifying CSS Selectors</a></li>
+					<li><a href="http://css-tricks.com/efficiently-rendering-css/" target="_blank">Efficiently Rendering CSS</a></li>
+					<li><a href="https://developers.google.com/speed/docs/best-practices/rendering#UseEfficientCSSSelectors" target="_blank">Google's PageSpeed Insights about CSS Selectors</a></li>
+					<li><a href="https://developer.mozilla.org/en/Writing_Efficient_CSS" target="_blank">Mozilla Developer Network: Writing efficient CSS</a></li>
+				</ul>
+            </section>
+            <section>
+				<h2>Big Files</h2>
+				<p>CSS compression tools reduce the size of CSS files by:
+					<ul>
+					  <li>Stripping whitespace, comments, and unneeded semi-colons.
+					  <li>Shortening number and color values
+					</ul>
+				</p>
+				<p>For example, this:</p>
+				<pre>
+.sidebar {  /* color it grey, no border */
+    border-color: rgb(123, 123, 123);
+    border-width: 0px;
+}
+				</pre>
+				<p>becomes:</p>
+				<pre>
+.sidebar{border-color:#7b7b7b;border-width:0}
+				</pre>
+            </section>
+            <section>
+            	<p>Some CSS Compression Tools:</p>
+            	<ul>
+            		<li><a href="http://csscompressor.com/">CSS Compressor</a></li>
+					<li><a href="http://www.minifycss.com/css-compressor/">CSS Compressor & Minifier</a></li>
+					<li><a href="http://cssminifier.com/">CSS Minifier</a></li>
+            	</ul>
+            </section>
+            <section>
+            	<h2>Lots of Images: Spriting</h2>
+            	<p>When a pages uses many <code>IMG</code> tags or <code>background-url</code> properties,
+it slows down loading. For smaller images, "CSS spriting" can help.</p>
+            </section>
+            <section>
+
+            </section>
+            <section>
+
+            </section>
+            <section>
+
+            </section>
+            <section>
+
+            </section>
+            <section>
+
+            </section>
+            
+            
+            
+            
+            
+            
         </div>
         <footer>
             <div class="copyright">
